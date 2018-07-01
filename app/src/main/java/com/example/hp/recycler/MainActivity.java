@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recycler;
     private List<Movies> movieList = new ArrayList<Movies>();
-    private MovieAdapter movieAdapter;
+    private MoviesAdapter moviesAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,34 +23,39 @@ public class MainActivity extends AppCompatActivity {
 
         recycler = (RecyclerView)findViewById(R.id.recycle);
 
-        movieAdapter = new MovieAdapter(movieList);
+        moviesAdapter = new MoviesAdapter(movieList);
 
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recycler.setLayoutManager(mLayoutManager);
         recycler.setItemAnimator(new DefaultItemAnimator());
-        recycler.setAdapter(movieAdapter);
+        recycler.setAdapter(moviesAdapter);
 
         MovieData();
     }
 
     private void MovieData() {
 
-        Movies movie = new Movies ("Final Destination", "romance--disaster", "1997");
-        movie.setImage(R.drawable.finaldestination);
+        Movies movie = new Movies ("Angry Birds", "", "2016");
+        movie.setImage(R.drawable.agrybird);
         movieList.add(movie);
 
-        movie = new Movies("Jumanji2", "action", "2018");
-        movie.setImage(R.drawable.jumanji2);
+        movie = new Movies("Raees", "Drama_Action", "2017");
+        movie.setImage(R.drawable.raeess);
         movieList.add(movie);
 
-        movie = new Movies("Jatt&Julliet2", "Romantic", "2017");
-        movie.setImage(R.drawable.jatt&julliet2);
+        movie = new Movies("Baahubali 2", "Action", "2017");
+        movie.setImage(R.drawable.baahu);
 
         movieList.add(movie);
 
-        movie = new Movies("Dil Hai Tumhara", "action", "2015");
-        movie.setImage(R.drawable.Diltumhara );
+        movie = new Movies("Tiger Zinda Hai", "Action", "2017");
+        movie.setImage(R.drawable.tigr);
+
+        movieList.add(movie);
+
+        movie = new Movies("Moonlight", "Action", "2016");
+        movie.setImage(R.drawable.mnlgt );
 
         movieList.add(movie);
     }

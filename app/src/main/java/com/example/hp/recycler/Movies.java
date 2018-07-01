@@ -1,20 +1,19 @@
 package com.example.hp.recycler;
 
-import java.time.Year;
-
 public class Movies {
 
     private String title,genre,year;
     private int image;
 
-    public Movies(String title, String genre, String year) {
+    public Movies (String title, String genre, String year) {
         this.title = title;
         this.genre = genre;
         this.year = year;
         this.image = image;
     }
 
-    public  String getTitle() {
+    public String getTitle() {
+
         return title;
     }
 
