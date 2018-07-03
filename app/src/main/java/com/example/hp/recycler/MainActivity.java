@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void MovieData() {
 
-        Movies movie = new Movies ("Angry Birds", "", "2016");
+        Movies movie = new Movies ("Angry Birds", "Funny", "2016");
         movie.setImage(R.drawable.agrybird);
         movieList.add(movie);
 
